@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reskill'n - AIラーニングコンサルタント</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/images/characters/Riskill'n.png" alt="Reskill'n サービスロゴ" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                        <span class="logo-emoji" style="display:none;">🐿️</span>
+                    </div>
+                    <h1>Reskill'n - AIラーニングコンサルタント</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#service" class="nav-link">サービスについて</a>
+                    <a href="#chat" class="nav-link">相談する</a>
+                    <a href="#about" class="nav-link">Reskill'nについて</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+            <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2 class="hero-title">あなたにおすすめのスキルを発見し、<br><span class="highlight">おすすめの学習講座を提案</span></h2>
+                    <p class="hero-description">
+                        Reskill'nは、AI技術を活用してあなたの自己実現の一歩目を応援します。<br>
+                        AIがスキルを分析し、最適な学習コンテンツを推奨します。
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="scrollToChat()">
+                            <i class="fas fa-comments"></i>
+                            今すぐ相談する
+                        </button>
+                        <button class="btn-secondary" onclick="scrollToService()">
+                            <i class="fas fa-info-circle"></i>
+                            サービスについて
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="character-container">
+                        <div class="character-bubble">
+                            <p>あなたの成長を応援するルン！<br>どんなスキルを学びたいルン？</p>
+                        </div>
+                        <div class="character">
+                            <img src="assets/images/characters/riskilln1.jpg" alt="リスキルん" class="character-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                            <span class="character-emoji" style="display:none;">🐿️</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="service">
+        <div class="container">
+            <h2 class="section-title">Reskill'nが提供する主な機能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>個別最適化された学習スキルの提案</h3>
+                    <p>AIがあなたの興味や目標を分析し、最適な学習スキルを個別にご提案します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AIによるスキル分析と学習コンテンツ推奨</h3>
+                    <p>AIがあなたの現在のスキルを分析し、市場のトレンドに合った学習コンテンツを自動で推奨します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🐿️</div>
+                    <h3>親しみやすいキャラクター</h3>
+                    <p>リスキルんが、あなたの成長を楽しくサポートするAIキャラクターです。どんな質問にも親身になって答えます。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>自己実現の一歩目を応援</h3>
+                    <p>「何を学べばいいか分からない」という悩みから解放され、自信を持って学びを始められるようサポートします。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="chat" class="chat-section">
+        <div class="container">
+            <h2 class="section-title">AIラーニングコンサルタントに相談してみよう</h2>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <img src="assets/images/characters/riskilln2.jpg" alt="リスキルん" class="avatar-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="avatar-emoji" style="display:none;">🐿️</span>
+                    </div>
+                    <div class="chat-info">
+                        <h3>リスキルん</h3>
+                        <span class="status">オンライン</span>
+                    </div>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <img src="assets/images/characters/riskilln3.jpg" alt="リスキルン" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span style="display:none;">🐿️</span>
+                        </div>
+                        <div class="message-content">
+                            <p>こんにちはルン！私はリスキルん、AIラーニングコンサルタントルン！</p>
+                            <p>どんなスキルを学びたいか、どんなことに興味があるか聞かせてほしいルン♪</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <input type="text" id="chatInput" placeholder="学びたいことや興味があることを入力してください..." class="chat-input">
+                        <button onclick="sendMessage()" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="chat-suggestions">
+                        <button class="suggestion-btn" onclick="sendSuggestion('AIについて学びたい')">AIについて学びたい</button>
+                        <button class="suggestion-btn" onclick="sendSuggestion('データ分析に興味がある')">データ分析に興味がある</button>
+                        <button class="suggestion-btn" onclick="sendSuggestion('プログラミングを始めたい')">プログラミングを始めたい</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Reskill'nについて</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>私たちの想い</h3>
+                    <p>現代社会はAIやITの進化により、働き方や必要なスキルが急速に変化しています。多くの人が「何を学べばいいか分からない」という悩みを抱えています。</p>
+                    <p>私たちは、この課題をAI技術で解決したいと考えています。学びは、人生をより楽しく、豊かにするための自己実現の一歩です。</p>
+                    <p><strong>「個別最適化された学習プラン」</strong>を提供し、あなたが自信を持って学びを始められるようお手伝いします。</p>
+                </div>
+                <div class="about-character">
+                    <div class="character-profile">
+                        <div class="profile-image">
+                            <img src="assets/images/characters/riskilln4.jpg" alt="リスキルん" class="profile-character-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <span class="profile-emoji" style="display:none;">🐿️</span>
+                        </div>
+                        <h4>リスキルん</h4>
+                        <p class="character-description">
+                            好奇心旺盛で明るいリスのAIキャラクター。<br>
+                            学習の楽しさを広めるために日々活動中ルン！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <img src="assets/images/characters/Riskill'n.png" alt="Reskill'n" class="footer-icon-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+                        <span class="footer-emoji" style="display:none;">🐿️</span>
+                    </div>
+                    <span>Reskill'n</span>
+                </div>
+                <p class="footer-text">AIラーニングコンサルタント</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
