@@ -1,0 +1,42 @@
+{
+  "name": "riskilln",
+  "version": "1.0.0",
+  "description": "AI Career Consultant - Riskilln",
+  "keywords": ["career", "ai", "consultation", "reskilling", "education"],
+  "author": "Riskilln Team",
+  "license": "MIT",
+  "scripts": {
+    "dev": "php -S localhost:8000",
+    "build": "npm run minify && npm run optimize",
+    "minify": "npm run minify:css && npm run minify:js",
+    "minify:css": "cleancss -o style.min.css style.css",
+    "minify:js": "uglifyjs script.js -o script.min.js",
+    "optimize": "imagemin assets/images/* --out-dir=assets/images/optimized",
+    "test": "php -l api.php && echo 'PHP syntax check passed'",
+    "deploy": "npm run build && npm run package",
+    "package": "zip -r riskilln-deploy.zip * -x 'node_modules/*' '*.git*' '*.log' 'package*'",
+    "lint": "eslint script.js",
+    "lint:fix": "eslint script.js --fix"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "uglify-js": "^3.17.4",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "eslint": "^8.0.0"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "php": ">=7.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/riskilln.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/riskilln/issues"
+  },
+  "homepage": "https://riskilln.com"
+}
