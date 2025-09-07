@@ -97,24 +97,27 @@ function removeLoading() {
 // Dify APIにメッセージを送信
 async function sendToDify(message) {
     try {
-        const response = await fetch('api.php', {
-            method: 'POST',
+    const DIFy_API_URL = "https://api.dify.ai/v1/chat-messages"; // ベースURLは https://api.dify.ai/v1
+        const API_KEY = "app-Gr4JaRLrQMv8Q1NabpQQhXC3";
+        const response = await fetch(DIFy_API_URL, {
+            method: "POST",
             headers: {
-                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${API_KEY}`,
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                message: message
+                inputs: { message: message },
+                response_mode: "blocking"
             })
         });
-        
-        const data = await response.json();
+    const data = await response.json();
+    console.log('dify API response:', data); // レスポンス内容を確認
         removeLoading();
         
-        if (data.success) {
+        if (data && data.answer) {
             // レスポンスからハッシュタグを抽出
-            const hashtags = extractHashtags(data.response);
-            const cleanMessage = data.response.replace(/#\w+/g, '').trim();
-            
+            const hashtags = extractHashtags(data.answer);
+            const cleanMessage = data.answer.replace(/#\w+/g, '').trim();
             addBotMessage(cleanMessage, hashtags);
         } else {
             addBotMessage('申し訳ございません。エラーが発生しました。もう一度お試しください。');
